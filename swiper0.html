@@ -36,13 +36,12 @@
   }
 
   #mainBanner .swiper-pagination{
-    right: 0;
-    bottom: 3rem;
+    width: auto;
+    bottom: 0;
     text-align: left;
   }
 
   .swiper-pagination-bullet{
-    position: relative;
     width: auto !important;
     height: auto !important;
     border-radius: 0 !important;
@@ -90,6 +89,7 @@
     bottom: 0;
     height: 3px;
     background-color: rgba(255,0,0, 1);
+    z-index: 1000;
   }
 
   .swiper-pagination-bullet-active:after{
@@ -97,6 +97,11 @@
     transition: 3s;
   }
 
+  .btns{
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 5rem;
+  }
   </style>
 </head>
 
@@ -142,7 +147,11 @@
             </div>
           </div>    
       </div>
-      <div class="swiper-pagination container"></div>
+      <div class="container btns d-flex">
+        <div class="swiper-pagination">
+          <!-- 여기안에는 태그를 넣을 수 없음 커스텀마이징 불가 -->
+        </div>
+      </div>
 
     </div>
   </section>
