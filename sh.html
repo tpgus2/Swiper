@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    @font-face {
+    font-family: 'MangoDdobak-B';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/MangoDdobak-B.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    }
+   body {margin: 0;
+        font-family: 'MangoDdobak-B' }
+    .bg1 {
+        background-image: url(./img/main1.jpg);
+        position: relative;
+    }
+
+    .bg2 {
+        background-image: url(./img/main2.jpg);
+    }
+
+    .bg3 {
+        background-image: url(./img/main3.jpg);
+    }
+
+    .swiper-slide{
+        height: 80vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .swiper-slide span{
+        color: white;
+        font-size: 4rem;
+        line-height: 1;
+        transition: 0.7s;
+        opacity: 0;
+        transform: translateX(0%);
+    }
+
+    .swiper-slide-active span{
+        transition: 0.7s;
+        opacity: 1;
+        transform: translateX(100%);
+    }
+    .main_txt {
+        position: absolute;
+        top:70%;
+        left:3%;
+        
+    }
+    .main_txt p {
+        color: white;
+    }
+    /* .swiper-slide-active{
+
+    } */
+
+    .swiper-scrollbar{
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    .swiper-scrollbar-drag{
+        background-color: white !important;
+        border-radius: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <section id="mainBanner_sh">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide bg1">
+            <div class="main_txt">
+                <span>With My Family</span><br>
+                <span>반려동물과 함께 하는 삶</span>
+            </div>
+        </div>
+        <div class="swiper-slide bg2">\
+            <div class="main_txt">
+                <span>모두가 행복한 공간으로,</span><br>
+                <span>와요 "WAYO" !</span>
+                <p>와요 "WAYO" 공식 유튜브 리뉴얼 </p>
+            </div>
+        </div>
+        <div class="swiper-slide bg3">
+            <span>Slide 3</span>
+        </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+   
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper("#mainBanner_sh .mySwiper", {
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
